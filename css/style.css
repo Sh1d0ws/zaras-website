@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fff5f8);
+    color:#d63384;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+    background:rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    border-bottom:2px solid #ffd6e7;
+}
+
+nav h1{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:#d63384;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff69b4;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h2{
+    font-size:3rem;
+}
+
+/* LAYOUT */
+.page-layout{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.side-images{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.photo-frame{
+    width:200px;
+    height:300px; /* ✅ taller, more rectangular */
+    background:rgba(255,255,255,0.7);
+    border:3px solid #ffd6e7;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(255,105,180,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#ff69b4;
+    overflow:hidden;
+}
+
+/* GLOBAL image fit */
+.photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* CENTER CARD */
+.center-card{
+    max-width:500px;
+    background:rgba(255,255,255,0.7);
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(255,105,180,0.2);
+}
+
+/* CARDS */
+.card-section{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:30px;
+}
+
+.card{
+    width:260px;
+    background:rgba(255,255,255,0.7);
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(255,105,180,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* FLOATING HEARTS */
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-120vh); opacity: 0; }
+}
